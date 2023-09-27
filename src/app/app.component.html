@@ -1,0 +1,23 @@
+<h3>Interpolation</h3>
+<h2>{{ bookName1 }}</h2>
+<h2>{{ bookName2.length }}</h2>
+<h2>{{ bookName2.toUpperCase() }}</h2>
+
+<h3>Property Binding</h3>
+<button [disabled] = isDisabled>Show Books</button>
+
+<h3>Event Binding</h3>
+<button [disabled] = isDisabled (click)="clickEvent()">Show Books</button>
+<br>
+<input type="text" (input)="onInputEvent($event)">
+<br><br>
+<button value="NoteBook" (click)="addToCart($event)">NoteBook</button>&nbsp;
+<button value="Eraser" (click)="addToCart($event)">Eraser</button>&nbsp;
+<button value="Pen" (click)="addToCart($event)">Pen</button>&nbsp;
+<button value="Pencil" (click)="addToCart($event)">Pencil</button>&nbsp;
+<br><br>
+
+<h3>Two-way Data Binding</h3>
+<label for="">Enter your name: </label>
+<input type="text" placeholder="Your name..." [(ngModel)] = 'name'>
+<h3>My name is {{name}}</h3>
